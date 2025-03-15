@@ -25,6 +25,13 @@ module.exports = {
         },
       },
       {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "ts-loader",
+        },
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
@@ -35,7 +42,7 @@ module.exports = {
       name: "container",
       remotes: {
         homepageApp: "homepageApp@http://localhost:3001/remoteEntry.js",
-        contactApp: "contactApp@http://localhost:3002/remoteEntry.js",
+        // contactApp: "contactApp@http://localhost:3002/remoteEntry.js",
         privacyApp: "privacyApp@http://localhost:3003/remoteEntry.js",
       },
       shared: {
